@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js" data-dojo-config="async:true"></script>
+    <title>Dojo</title>
+</head>
+
+
+<body>
+    <div id="contenedor"></div>
+    
+    <script type="text/javascript">
+        require(["dojo/dom", "dojo/dom-construct"], function(dom, domConstruct){
+            let contenedor = dom.byId("contenedor");
+            contenedor.innerHTML = "Dojo te dice hola mundo!";
+
+            domConstruct.create("h1", {innerHTML: "Dojo es genial!"}, contenedor, "before");
+        });
+    </script>
+</body>
+
+
+</html>
